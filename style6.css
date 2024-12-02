@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    overflow: hidden;        
+    background-color: #000;  
+}
+
+.psych-gif {
+    width: 100%;             
+    height: auto;  
+    max-height: 100%;          
+    object-fit: cover;       
+
+}
+
+
+  

@@ -1,0 +1,29 @@
+html, body {
+    margin: 0; 
+    overflow: hidden; 
+    background-color: black; 
+  }
+  
+  .fullscreen-gif {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: contain; 
+    z-index: 1;
+  }
+
+    .bubble-gif {
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    width: 10vw; 
+    height: 10vh; 
+    object-fit: contain; 
+    z-index: 2;
+    }
+  
+  
+  

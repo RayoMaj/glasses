@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Glasses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style1.css">
+  <style>
+
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      filter: blur(6px); 
+      transition: filter 0.3s ease; 
+    }
+
+    .unblurred {
+        filter: none; 
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      padding: 30px 60px;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      cursor: pointer;
+      z-index: 1000; 
+    }
+
+    .image-container img {
+      max-width: 600px; /* Adjust size */
+      position: relative;
+      top: 150px;
+      left: 200px;
+      display: block;
+    }
+    .overlay-image {
+      position: absolute; 
+      top: 0;
+      left: 0;
+      width: 100vw;  
+      height: 100vh; 
+      object-fit: contain; 
+      z-index: 999; 
+      pointer-events: none;
+    }
+
+
+
+      #newImage {
+      position: absolute;
+      top: 60%;
+      left: 63%;
+      max-width: 150px;
+      z-index: 10;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+    <img id="overlayImage" class="overlay-image" src="starbounce.png" alt="animation">
+  <div class="image-container">
+    <img id="toggleImage" src="noglasses.jpg">
+  </div>
+
+
+  <img id="newImage" src="arrow_button.png" alt="New Image">
+  <a href="page2.html">
+    <img id="newImage" src="arrow_button.png" alt="Next Page">
+  </a>
+
+  <button id="unblurButton"> <b>WEAR GLASSES</b></button>
+
+  <script>
+
+    const button = document.getElementById('unblurButton');
+    const body = document.body;
+    const image = document.getElementById('toggleImage');
+
+    let isBlurred = true; 
+
+    button.addEventListener('click', () => {
+      body.classList.toggle('unblurred'); 
+      isBlurred = !isBlurred; 
+
+      
+      if (isBlurred) {
+        image.src = 'noglasses.jpg'; 
+        button.textContent = 'WEAR GLASSES :0'; 
+      } else {
+        image.src = 'withglasses.jpg'; 
+        button.textContent = 'REMOVE GLASSES'; 
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Emotions</title>
+  <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+
+  <p>SOME COLOURS DENOTE CERTAIN EMOTIONS</p>
+
+  
+
+  <img src="redbut.jpg" alt="Button 1" class="button-image" onclick="showImage('image1')">
+  <img src="bluebut.jpg" alt="Button 2" class="button-image" onclick="showImage('image2')">
+  <img src="greybut.jpg" alt="Button 3" class="button-image" onclick="showImage('image3')">
+  <img src="yellowbut.jpg" alt="Button 4" class="button-image" onclick="showImage('image4')">
+  
+
+
+  
+  <img id="image1" src="image1.jpg" class="hidden-image" alt="Image 1">
+  <img id="image2" src="image2.jpg" class="hidden-image" alt="Image 2">
+  <img id="image3" src="image3.jpg" class="hidden-image" alt="Image 3">
+  <img id="image4" src="image4.jpg" class="hidden-image" alt="Image 4">
+
+  <script>
+    
+    function showImage(imageId) {
+      
+      const images = document.querySelectorAll('.hidden-image');
+      images.forEach(image => image.style.display = 'none');
+
+      document.getElementById(imageId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
